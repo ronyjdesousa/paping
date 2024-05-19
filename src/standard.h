@@ -6,7 +6,7 @@
 	#pragma comment(lib, "ws2_32.lib")
 #endif
 
-#define	VERSION	"1.5.5"
+#define	VERSION	"1.6.0"
 #define	AUTHOR	"Mike Lovell"
 #define YEAR	((((__DATE__ [7] - '0') * 10 + (__DATE__ [8] - '0')) * 10 + (__DATE__ [9] - '0')) * 10 + (__DATE__ [10] - '0'))
 
