@@ -1,43 +1,30 @@
-~ Fixed issue #2 - Missing DLL: MSVCP100D.dll
-~ Fixed  issue #4  - Incorrectly Reported all ports on LocalHost as open
-~ Fixed  issue #5  - Return codes not being set
+#PAPING
 
-# Can you help?
-UDP I realize that testing UDP ports is not reliable but it would be nice to add the feature - Know how? Please help the project (papingproject@gmail.com).
+** Network Test Connection **
 
-Translation Can you help translate the strings used, if so please check out the Wiki article 'Translation' for a list.
+**Paping** is an open-source tool designed to **monitor the availability** of a 
+TCP/IP network connection **TCP between two points**. It offers a 
+straightforward approach to checking if a server is reachable and responsive
+on a specific port. **Paping** enables real-time monitoring of server status,
+aiding in the prompt detection of connectivity issues.
 
-# Command line options
-```
-paping v1.5.1 - Copyright (c) 2010 Mike Lovell
+** BUILDING FROM SOURCE **
 
-Connecting to www.l.google.com [209.85.225.147] on TCP 80:
+Packit requires the following elements to compile:
 
-Connected to 209.85.225.147: time=24.00ms protocol=TCP port=80
-Connected to 209.85.225.147: time=25.00ms protocol=TCP port=80
-Connected to 209.85.225.147: time=24.00ms protocol=TCP port=80
-Connected to 209.85.225.147: time=24.00ms protocol=TCP port=80
+  * autoconf >= 2.71-3 <br>
 
-Connection statistics:
-        Attempted = 4, Connected = 4, Failed = 0 (0.00%)
-Approximate connection times:
-        Minimum = 24.00ms, Maximum = 25.00ms, Average = 24.25ms
-```
-# Example usage
-```
-C:\> paping www.google.com -p 80 -c 4
+Packit source installation is simple:
 
-paping v1.5.1 - Copyright (c) 2010 Mike Lovell
+    $ ./autogen.sh
+    $ ./configure
+    $ make
 
-Connecting to www.l.google.com [209.85.225.147] on TCP 80:
+Then as 'root':
 
-Connected to 209.85.225.147: time=24.00ms protocol=TCP port=80
-Connected to 209.85.225.147: time=25.00ms protocol=TCP port=80
-Connected to 209.85.225.147: time=24.00ms protocol=TCP port=80
-Connected to 209.85.225.147: time=24.00ms protocol=TCP port=80
+    # make install
 
-Connection statistics:
-        Attempted = 4, Connected = 4, Failed = 0 (0.00%)
-Approximate connection times:
-        Minimum = 24.00ms, Maximum = 25.00ms, Average = 24.25ms
-```
+The autogen.sh can be used with the 'clean' option to remove all
+generated files. Example:
+
+    $ ./autogen.sh clean
