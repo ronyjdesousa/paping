@@ -1,6 +1,6 @@
-#PAPING
+**PAPING**
 
-** Network Test Connection **
+**Network Test Connection**
 
 **Paping** is an open-source tool designed to **monitor the availability** of a 
 TCP/IP network connection **TCP between two points**. It offers a 
@@ -8,13 +8,13 @@ straightforward approach to checking if a server is reachable and responsive
 on a specific port. **Paping** enables real-time monitoring of server status,
 aiding in the prompt detection of connectivity issues.
 
-** BUILDING FROM SOURCE **
+**BUILDING FROM SOURCE**
 
-Packit requires the following elements to compile:
+Paping requires the following elements to compile:
 
   * autoconf >= 2.71-3 <br>
 
-Packit source installation is simple:
+Paping source installation is simple:
 
     $ ./autogen.sh
     $ ./configure
