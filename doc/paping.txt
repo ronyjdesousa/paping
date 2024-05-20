@@ -1,13 +1,12 @@
 NAME
-       paping - Cross-platform TCP port testing, emulating the functionality of ping (port ping)
+  paping - Cross-platform TCP port testing, emulating the functionality of ping (port ping)
 
 SYNOPSIS
-       paping [options] destination
+  paping [options] destination [port]
 
 DESCRIPTION
-       The papping command is used to communicate with another host using the TCP protocol (SYN,ACK and FYN).
-       Paping uses a 3-way handshake and finished connection to test communicate with another host,
-       similiar "Ping", but using only TCP connection.
+  Paping is a versatile open-source tool used to monitor the availability of 
+  TCP/IP network connections TCP protocol between two endpoints. 
 
        1) Caller sends SYN
        2) Recipient responds with SYN, ACK
@@ -15,37 +14,54 @@ DESCRIPTION
        4) Caller sends ACK, FYN
        5) Recipient responds FYN, ACK
 
-       Paping works only IPv4 and TCP.
+  Paping offers various options and parameters to customize its behavior
+  according to specific monitoring requirements.
+
+  Basic Syntax:
+
+  paping [options] destination [port]
+
+  Destination: IP address or hostname of the target server.
+  Port: Port number to monitor. Example: port 80 for HTTP.
+
+  Output:
+  
+  Paping provides clear and informative output to convey the status of
+  the network connection.
+
+  Response Time: Displays the round-trip time for each paping request.
+  Success: Indicates successful paping with response time.
+  Failure: Indicates failed paping request with an error message.
       
 OPTIONS
 
-       -?, --help	
-               The option displays usage
+  -?, --help	
+          The option displays usage
  
-       -c, --count N	
-               set number of checks to N
+  -c, --count N	
+          set number of checks to N
 
-       -p, --port N	
-               set TCP port N (required)
+  -p, --port N	
+          set TCP port N (required)
      
-       -t, --timeout	
-               timeout in milliseconds (default 1000)
+  -t, --timeout	
+          timeout in milliseconds (default 1000)
 
-      --nocolor	
-          Disable color output
+  --nocolor	
+      Disable color output
 
 BUGS
-           • Limitation to use only IPv4 and TCP.
 
-           • Please send bug reports, questions, requests, fixes and pull requests to
-             https://github.com/ronyjdesousa/paping/issues
+  • Limitation to use only IPv4 and TCP protocol.
+
+  • Please send bug reports, questions, requests, fixes and pull requests to
+    https://github.com/ronyjdesousa/paping/issues
 
 SEE ALSO
-       ip(8), ss(8), ping(8).
+  ip(8), ss(8), ping(8).
 
 AUTHOR
-       The original author of paping is Mike Lovell. Currently, this project is maintained
-       by volunteers.
+  The original author of paping is Mike Lovell. Currently, this project is maintained
+  by volunteers.
 
-       The last version of paping can be found at https://github.com/ronyjdesousa/paping/pulls
-
+  The last version of paping can be found at https://github.com/ronyjdesousa/paping/pulls
